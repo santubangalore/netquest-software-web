@@ -1,0 +1,190 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition for Net Quest Software.
+ *
+ * Midnight Indigo palette:
+ *   #0a0a1a → deep background
+ *   #141432 → elevated surface
+ *   #1e1e5a → accent dark
+ *   #4f46e5 → primary indigo
+ *
+ * Typography:
+ *   Display: Sora
+ *   Body: Manrope
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-indigo-deep: var(--indigo-deep);
+  --color-indigo-glow: var(--indigo-glow);
+  --color-surface-elevated: var(--surface-elevated);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.09 0.02 264);
+  --foreground: oklch(0.95 0.01 247);
+  --card: oklch(0.13 0.04 264);
+  --card-foreground: oklch(0.95 0.01 247);
+  --popover: oklch(0.13 0.04 264);
+  --popover-foreground: oklch(0.95 0.01 247);
+  --primary: oklch(0.55 0.22 264);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.19 0.12 264);
+  --secondary-foreground: oklch(0.95 0.01 247);
+  --muted: oklch(0.18 0.04 264);
+  --muted-foreground: oklch(0.7 0.04 256);
+  --accent: oklch(0.19 0.12 264);
+  --accent-foreground: oklch(0.95 0.01 247);
+  --destructive: oklch(0.62 0.21 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.55 0.22 264);
+  --chart-1: oklch(0.55 0.22 264);
+  --chart-2: oklch(0.6 0.18 190);
+  --chart-3: oklch(0.7 0.16 80);
+  --chart-4: oklch(0.65 0.2 300);
+  --chart-5: oklch(0.5 0.2 20);
+  --sidebar: oklch(0.11 0.03 264);
+  --sidebar-foreground: oklch(0.95 0.01 247);
+  --sidebar-primary: oklch(0.55 0.22 264);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.19 0.12 264);
+  --sidebar-accent-foreground: oklch(0.95 0.01 247);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.55 0.22 264);
+
+  --indigo-deep: oklch(0.19 0.12 264);
+  --indigo-glow: oklch(0.65 0.2 264);
+  --surface-elevated: oklch(0.13 0.04 264);
+}
+
+.dark {
+  --background: oklch(0.09 0.02 264);
+  --foreground: oklch(0.95 0.01 247);
+  --card: oklch(0.13 0.04 264);
+  --card-foreground: oklch(0.95 0.01 247);
+  --popover: oklch(0.13 0.04 264);
+  --popover-foreground: oklch(0.95 0.01 247);
+  --primary: oklch(0.55 0.22 264);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.19 0.12 264);
+  --secondary-foreground: oklch(0.95 0.01 247);
+  --muted: oklch(0.18 0.04 264);
+  --muted-foreground: oklch(0.7 0.04 256);
+  --accent: oklch(0.19 0.12 264);
+  --accent-foreground: oklch(0.95 0.01 247);
+  --destructive: oklch(0.62 0.21 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.55 0.22 264);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-indigo-glow) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility glow {
+  box-shadow: 0 0 40px -10px color-mix(in oklch, var(--color-primary) 40%, transparent);
+}
+
+@utility section-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @media (min-width: 768px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
